@@ -7,8 +7,8 @@ body{
 margin: 0;
 padding: 0;
 font-family: "Montserrat", sans-serif;
-overflow-x: hidden;
 
+overflow-x: hidden;
 }
 .logo{
 
@@ -28,7 +28,7 @@ overflow-x: hidden;
   position: fixed;
   width: 100%;
   height: 85px;
-    z-index: 15;
+    z-index: 3
 }
 .first-nav li{
   list-style: none;
@@ -290,20 +290,9 @@ cursor: pointer;
   85%{left:-100%}
   90%{left:0}
 }
-.container-wrapper{
-  width: 400%;
-  display: flex;
-  position: relative;
-
-  height: 80vh;
-
-}
 .container{
-  width: 1600%;
-  position: relative;
-  left:-10px;
+  height: auto;
 }
-
 .card{
   height: 100%;
 
@@ -319,9 +308,7 @@ cursor: pointer;
 .wrapper{
   width: 100%;
   height: 100%;
-
   justify-content: space-around;
-  /*justify-content: space-around;*/
   display: flex;
   flex-direction:row;
   position: relative;
@@ -384,53 +371,6 @@ cursor: pointer;
 .adjust{
   margin-top: 3rem;
 }
-.slide-btn{
-  width:1.5rem;
-  height: 1.5rem;
-  background-color: #fff;
-  border: .1px solid #333;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  outline: none;
-  position: relative;
-  top: 60rem;
-  transform: translateX(80rem);
-}
-.slide-btn:hover{
-  background-color: #333;
-}
-
-.slide-btn-1{
-  left:-3rem;
-}
-.slide-btn-2{
-  left:-2rem;
-}
-.slide-btn-3{
-  left:-1rem;
-}
-.slide-btn-4{
-  left:0rem;
-}
-.slide-btn-1:focus ~ .container{
-    transition: left .8s cubic-bezier(1,0,0,1);
-  left:-10px;
-
-}
-
-.slide-btn-2:focus ~ .container{
-  transition: left .8s cubic-bezier(1,0,0,1);
-  left:-1510px;
-}
-.slide-btn-3:focus ~ .container{
-    transition: left .8s cubic-bezier(1,0,0,1);
-  left:-3010px;
-}
-.slide-btn-4:focus ~ .container{
-    transition: left .8s cubic-bezier(1,0,0,1);
-  left:-4500px;
-}
 .more{
   text-decoration: none;
   font-size: 1.8rem;
@@ -439,7 +379,7 @@ cursor: pointer;
   background-color: crimson;
   color:white;
   position: relative;
-  left:74rem;
+  left:70rem;
   transition: all 1s;
 }
 .view-more{
@@ -469,16 +409,4 @@ display: flex;
 }
 .last{
   border:none;
-}
-.offer-banner{
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 3rem;
-  margin-top: 5rem;
-}
-.banners{
-  width: 40%;
-  height: 300px;
-  border-radius: 5rem;
-  box-shadow: 0 3rem 6rem rgba(0,0,0,0.6);
 }
