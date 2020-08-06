@@ -13,5 +13,5 @@ app.listen(process.env.PORT || 3000, (req,res) => {
 
 app.get("/home", (req,res) => {
 
-  res.render("home");
+  res.render("first");
 })
