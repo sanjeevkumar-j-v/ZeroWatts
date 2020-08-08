@@ -2,10 +2,24 @@ body{
   margin:0;
   padding:0;
    font-family: "Montserrat", sans-serif;
+   background-color: #DCDCDC;
 }
 html{
   font-size: 62.5%;
   box-sizing: border-box;
+}
+::-webkit-scrollbar{
+  width:10px;
+
+
+}
+::-webkit-scrollbar-thumb{
+   background-color:crimson ;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+
 }
 .container{
   width:100%;
@@ -13,7 +27,7 @@ html{
 }
 .social-icons{
   display: flex;
-
+  transition: 0.3s linear;
   margin:0;
   padding:0;
   background-color: #e40046 !important;
@@ -52,7 +66,8 @@ h5{
   margin-top: 0;
   position:fixed;
   width: 100%;
-  z-index:1;
+  z-index:10;
+  transition: 0.4s linear;
 }
 .first-nav-list{
   display: flex;
@@ -117,6 +132,7 @@ left:-10.5rem;
   width:30rem;
   height:100%;
   position: fixed;
+  z-index: 2;
   background-color: #333;
   top:10rem;
   box-shadow: 0 3rem 6rem rgba(0,0,0,0.6);
@@ -201,6 +217,318 @@ left: -5rem;
   transform: rotate(405deg) translate(-7px,-7px);
   width: 2.5rem;
 }
+
+.banner-slide{
+  width: 100%;
+  height:40%;
+  position: relative;
+  bottom: 1rem;
+  z-index: 0;
+  top: 7rem;
+}
+.banner-text{
+  position: absolute;
+  z-index:3;
+
+left: 24%;
+top: 20%;
+}
+.banner-text h1{
+  color: white;
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-bottom: 3rem;
+
+}
+.banner-text p{
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin-top:0;
+}
+.banner-text a{
+  position: relative;
+  text-decoration: none;
+  font-size: 1.8rem;
+  border-radius: 10rem;
+  padding:2rem;
+  background-color: crimson;
+  color:white;
+  position: relative;
+  left: 30rem;
+    top: 3rem;
+  transition: all 3s;
+}
+.slidshow{
+
+
+  height:100%;
+
+
+  overflow-x: hidden;
+}
+.slideshow-wrapper{
+  width: 400%;
+  height:100%;
+  position: relative;
+  display: flex;
+  /*transition: left .8s cubic-bezier(1,0,0,1);*/
+ animation: slideanime 20s infinite;
+}
+.slide img{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide{
+  height: 100%;
+}
+@keyframes slideanime {
+  0%{left:0}
+  10%{left:0}
+  15%{left:-100%}
+  25%{left:-100%}
+  30%{left:-200%}
+  40%{left:-200%}
+  45%{left:-300%}
+  55%{left:-300%}
+  60%{left:-200%}
+  70%{left:-200%}
+  75%{left:-100%}
+  85%{left:-100%}
+  90%{left:0}
+}
+.top-three{
+  position: relative;
+  top:10rem;
+}
+.common-heading{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-family: "Josefin sans",sans-serif;
+  letter-spacing: .1rem;
+
+}
+.card-wrapper{
+  width: 100%;
+  height: auto;
+
+  justify-content: space-evenly;
+  /*justify-content: space-around;*/
+  display: flex;
+  flex-direction:row;
+  position: relative;
+  margin-top: 10rem;
+}
+.card{
+  height: 100%;
+
+  width:30rem;
+  height:40rem;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 3rem 6rem rgba(0,0,0,0.6);
+  border-radius: 5rem;
+  transition: all 1s;
+  cursor: pointer;
+  background-color: white;
+}
+.card img{
+  width:200px;
+  text-align: center;
+  padding-left:5rem;
+}
+.card h2{
+  text-align: center;
+}
+.card h1{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.shop{
+
+  padding:1rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  position: relative;
+  left:10rem;
+  top:3rem;
+  border-radius: 10rem;
+  color: white;
+  background-color: crimson;
+  transition: all 1s;
+}
+.shop:hover{
+  letter-spacing: .2rem;
+}
+.card:hover{
+  background-color: crimson;
+}
+.card:hover >  h1 {
+  color: white;
+}
+.card:hover > h2{
+  color:white;
+}
+.card:hover > a{
+  color:white;
+  background-color: #333;
+
+}
+.center{
+ transform: scale(1.1);
+}
+.adjust{
+  margin-top: 3rem;
+}
+
+.detials{
+  margin-top: 10rem;
+display: flex;
+
+}
+.small-card{
+  width: 40rem;
+  height: 20rem;
+  border-right:2px solid lightgray;
+  margin-bottom: 6rem;
+  text-align: center;
+  background-color: white;
+}
+.small-card h2{
+  font-size: 1.7rem;
+}
+.small-card p{
+  font-size: 1.5rem;
+}
+.last{
+  border:none;
+}
+.product-slide{
+  width:90%;
+  margin: 10rem; auto 5rem auto;
+    height:100%;
+
+    overflow:hidden;
+}
+.product-slide-wrapper{
+  width:400%;
+  height: 100%;
+  position: relative;
+transition: all .2s linear;
+background-color: white;
+}
+.product{
+  display: flex;
+
+}
+.product-card{
+  width:25rem;
+  height:40rem;
+
+  padding-left:5rem;
+  transition: all .2s linear;
+}
+.product-card img{
+  width: 200px;
+}
+.product-card h1{
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+.product-card h2{
+
+}
+.shop-now{
+  padding:1rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  position: relative;
+  left:4rem;
+  top:3rem;
+  border-radius: 10rem;
+  color: white;
+  background-color: crimson;
+  transition: all 1s;
+}
+.product-card:hover{
+  border:1px solid white;
+
+  box-shadow: 0 3rem 6rem rgba(0,0,0,0.6);
+}
+.shop-now:hover{
+  background-color: #333;
+  letter-spacing: .2rem;
+}
+.next{
+  position: relative;
+    top: 25rem;
+    left:96.5%;
+    z-index: 1;
+
+    border-radius: 5rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    outline: none;
+    background-color: white;
+    color:#333;
+    border:.5px solid;
+}
+.next:hover{
+  background-color: #333;
+  color:white;
+}
+.prev{
+  position: relative;
+    top: 25rem;
+    right:4.2rem;
+    z-index: 1;
+
+    border-radius: 5rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    outline: none;
+    background-color: white;
+    color:#333;
+    border:.5px solid;
+}
+.prev:hover{
+  background-color: #333;
+  color:white;
+}
+.offer-banner{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+}
+.banners{
+  width: 40%;
+  height: 300px;
+  border-radius: 5rem;
+  box-shadow: 0 3rem 6rem rgba(0,0,0,0.6);
+}
+.more{
+  text-decoration: none;
+  font-size: 1.8rem;
+  border-radius: 10rem;
+  padding:2rem;
+  background-color: crimson;
+  color:white;
+  position: relative;
+  left:73rem;
+  transition: all 1s;
+}
+.view-more{
+  margin:8rem 0 3rem 0;
+}
+.more:hover{
+  background-color: #333;
+  letter-spacing: .2rem;
+}
+
 @media(max-width:1170px){
   .checkbox:checked ~ .first-nav  .hamburger {
   left: -2rem;
