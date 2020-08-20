@@ -106,13 +106,20 @@ nav{
   background-color: #9525CD;
   color: #fff;
 }
+.wrp img{
+  width: 90%;
+    position: relative;
+    top: -8rem;
+}
 .editor{
-  width: 40%;
-  height: 60vh;
-  border: 2px solid #333;
-  margin:auto;
-  box-shadow: 0 3rem 6rem rgba(0,0,0,0.2);
-  background-color: #333;
+  width: 50%;
+height: 60vh;
+border: 2px solid #333;
+margin: auto;
+box-shadow: 0 3rem 6rem rgba(0,0,0,0.2);
+background-color: #333;
+position: relative;
+top: -62rem;
 
 }
 
@@ -203,22 +210,21 @@ nav{
   animation-fill-mode: backwards;
 }
 .test-6{
-  width: 30rem;
-  height: 20rem;
-  background-color: white;
-  animation: test6 1s 6s backwards;
-  position: relative;
-  left: 31rem;
-  top: 2.2rem;
-  background-color: #333;
-  border: 1px solid #fff;
+  width: 100%;
+height: 20rem;
+
+animation: test6 1s 6s backwards;
+position: relative;
+left: -.1rem;
+top: 2.8rem;
+background-color: #333
 }
 .test-6 .compile{
   visibility: hidden;
     animation: test7 1s 7s backwards;
     position: relative;
     top: 5rem;
-    left: 8rem;
+    left: 10rem;
     color: white;
 
 }
