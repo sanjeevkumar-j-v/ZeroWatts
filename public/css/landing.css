@@ -1,0 +1,684 @@
+
+html{
+font-size: 62.5%;
+box-sizing: border-box;
+}
+body{
+margin: 0;
+padding: 0;
+font-family: "Montserrat", sans-serif;
+overflow-x: hidden;
+/*  background: linear-gradient(to bottom, #fff 50%, #D8BFD8);*/
+ height: 100%;
+
+}
+.container{
+  width: 100%;
+  height: auto;
+}
+nav{
+  display: flex;
+}
+.logo{
+  flex: 1;
+  padding-left: 3rem;
+}
+.logo img{
+  width: 140px;
+}
+.sign-ul{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.login-list{
+  list-style: none;
+}
+.login-link{
+  text-decoration: none;
+  font-size: 2rem;
+  margin-right: 5rem;
+  padding: .5rem 2rem .5rem 2rem;
+
+  color: #fff;
+  font-family: "Josefin sans",sans-serif;
+  font-weight: 400;
+  border-radius:10rem;
+  background-color: #9525CD;
+  transition: all .8s cubic-bezier(1,0,0,1);
+}
+.login-link:hover{
+  letter-spacing: .2rem;
+
+}
+.main-wrapper{
+  width:100%;
+  display: flex;
+  justify-content:space-around;
+  margin-top: 5rem;
+}
+.contents{
+  width: 50%;
+  height: auto;
+
+
+  padding:2rem 2rem 2rem 3rem;
+}
+.content-heading{
+    font-size: 5rem;
+    font-family: "Concert One",cursive;
+    font-weight: 400;
+    background:linear-gradient(to right, #9525CD,#0DC6FF);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.life{
+  font-family: "Josefin sans",sans-serif;
+  font-size: 1.7rem;
+  margin-top: -2rem;;
+}
+.content-paragraph{
+  font-family: "Josefin sans",sans-serif;
+  font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-top: 1rem;
+    letter-spacing: .2rem;
+}
+.align{
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.startnow{
+  text-decoration: none;
+  font-size: 2rem;
+
+  padding: .5rem 2rem .5rem 2rem;
+
+  color: #9525CD;
+  font-family: "Josefin sans",sans-serif;
+  font-weight: 400;
+
+  border: 1px solid #9525CD;
+  transition: all .8s cubic-bezier(1,0,0,1);
+}
+.startnow:hover{
+  background-color: #9525CD;
+  color: #fff;
+}
+.editor{
+  width: 40%;
+  height: 60vh;
+  border: 2px solid #333;
+  margin:auto;
+  box-shadow: 0 3rem 6rem rgba(0,0,0,0.2);
+  background-color: #333;
+
+}
+
+.top{
+  width: 100%;
+  height: 5vh;
+  border: 1px solid #333;
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  border-bottom-color: #fff;
+  display:flex;
+  justify-content: space-between;
+}
+.circle-wrapper{
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+
+}
+.circle{
+  border:2px solid #333;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+
+}
+.test-1{
+  width: 30rem;
+  height: 1.5rem;
+  background-color: lightgreen;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  border-radius: 10rem;
+  animation: test1 .5s;
+  animation-delay: 1s;
+  transition: linear .5s;
+  animation-fill-mode: backwards;
+}
+.test-2{
+  width: 20rem;
+  height: 1.5rem;
+  background-color: lightpink;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  border-radius: 10rem;
+  animation: test2 .5s;
+  animation-delay: 2s;
+  transition: linear 1s;
+  animation-fill-mode: backwards;
+
+}
+.test-3{
+  width: 25rem;
+  height: 1.5rem;
+  background-color: skyblue;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  border-radius: 10rem;
+  animation: test3 .5s;
+  animation-delay: 3s;
+  transition: linear 1s;
+  animation-fill-mode: backwards;
+}
+.test-4{
+  width: 25rem;
+  height: 1.5rem;
+  background-color: crimson;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  border-radius: 10rem;
+  animation: test3 .5s;
+  animation-delay: 4s;
+  transition: linear 1s;
+  animation-fill-mode: backwards;
+}
+.test-5{
+  width: 20rem;
+  height: 1.5rem;
+  background-color: green;
+  margin-top: 2rem;
+  margin-left: 6rem;
+  border-radius: 10rem;
+  animation: test2 .5s;
+  animation-delay: 5s;
+  transition: linear 1s;
+  animation-fill-mode: backwards;
+}
+.test-6{
+  width: 30rem;
+  height: 20rem;
+  background-color: white;
+  animation: test6 1s 6s backwards;
+  position: relative;
+  left: 31rem;
+  top: 2.2rem;
+  background-color: #333;
+  border: 1px solid #fff;
+}
+.test-6 .compile{
+  visibility: hidden;
+    animation: test7 1s 7s backwards;
+    position: relative;
+    top: 5rem;
+    left: 8rem;
+    color: white;
+
+}
+.test-7{
+  width: 20rem;
+  height: 1rem;
+  background-color: lightgreen;
+  animation: test8 1s 8s backwards;
+  margin-bottom: 2rem;
+  border-radius: 10rem;
+  margin-left: 1rem;
+}
+.test-8{
+  width: 20rem;
+  height: 1rem;
+  background-color: crimson;
+  animation: test8 1s 8s backwards;
+  margin-bottom: 2rem;
+  border-radius: 10rem;
+  margin-left: 1rem;
+}
+.test-7-i{
+  visibility: visible;
+  animation: test7i 1s 9s backwards;
+  font-size: 1.5rem;
+  color: green;
+
+}
+.test-8-i{
+  visibility: visible;
+  animation: test7i 1s 9s backwards;
+  font-size: 1.5rem;
+  color: crimson;
+
+}
+.wrap{
+  display: flex;
+  justify-content: space-around;
+}
+@keyframes test1 {
+  0%{
+    width: 0rem;
+  }
+  100%{
+    width: 30rem;
+  }
+}
+@keyframes test2 {
+  0%{
+    width: 0rem;
+  }
+  100%{
+    width: 20rem;
+  }
+}
+@keyframes test3 {
+  0%{
+    width: 0rem;
+  }
+  100%{
+    width: 25rem;
+  }
+}
+@keyframes test6 {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes test7 {
+  0%{
+    opacity: 1;
+    visibility: visible;
+  }
+  100%{
+    opacity: 0;
+
+    visibility: hidden;
+  }
+}
+@keyframes test7i {
+  0%{
+    opacity: 1;
+    visibility: hidden;
+
+  }
+  100%{
+    opacity: 0;
+    visibility: visible;
+
+  }
+}
+@keyframes test8 {
+  0%{
+    width: 0rem;
+  }
+  100%{
+    width: 20rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.exit{
+  background: transparent;
+  outline: none;
+  border: none;
+  float:right;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+.c1{
+  background-color: lightpink;
+  animation: scale 2s infinite;
+  a
+}
+.c2{
+  background-color: lightblue;
+
+}
+.c3{
+  background-color: lightgreen;
+
+}
+.main-wrapper .element{
+  font-family: "Josefin Sans",sans-serif;
+  font-size: 1.8rem;
+}
+
+svg{
+  position: relative;
+  top:1rem;
+}
+@keyframes scale {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1.5);
+  }
+}
+.sign-up-form{
+  width: 30%;
+  margin:10rem auto;
+  height: auto;
+
+  display: none;
+  box-shadow: 0 3rem 6rem rgba(0,0,0,0.6);
+}
+.log-in-form{
+  width: 30%;
+  margin:10rem auto;
+  height: auto;
+
+  display: none;
+  box-shadow: 0 3rem 6rem rgba(0,0,0,0.6);
+}
+.common-heading{
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Josefin sans",sans-serif;
+  padding-top: 1rem;
+}
+.sign-up-method{
+  display: flex;
+  flex-direction: column;
+  padding:2rem;
+
+}
+.sign-links{
+  margin-bottom: 2rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-family: "Josefin sans",sans-serif;
+  border: 1px solid #333;
+  text-align: center;
+  padding: 1rem;
+}
+.fc{
+  color: white;
+  background-color: #3b5998;
+  border-radius: 10rem;
+  border:none;
+}
+.gc{
+  color: black;
+  border-radius: 10rem;
+
+}
+.name-wrapper{
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 2rem;
+}
+.other-wrapper{
+  display: flex;
+  flex-direction: column;
+
+}
+.nameinp{
+  width: 40%;
+  padding: 1rem;
+  outline: none;
+
+}
+.otherinp{
+  margin-bottom: 2rem;
+  padding:1rem;
+  outline: none;
+
+}
+
+
+.signup-btn{
+  position: relative;
+  left: 40%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border-radius: 10rem;
+  border-color: #9525CD;
+  color: #9525CD;
+  background-color: transparent;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all .8s cubic-bezier(1,0,0,1);
+  font-family: "Josefin sans",sans-serif;
+}
+.signup-btn:hover{
+  background-color: #9525CD;
+  color: white;
+}
+
+.checkbox-0:checked ~ .sign-up-form{
+  display: block;
+}
+.checkbox-0:checked ~ .container{
+  display: none;
+}
+.checkbox-1:checked ~ .log-in-form{
+  display: block;
+}
+.checkbox-1:checked ~ .container{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*.banner-txt{
+  position: relative;
+  text-align: center;
+  top:30rem;
+  transition: all .8s cubic-bezier(1,0,0,1);
+
+}
+
+.banner-txt h1{
+  color: white;
+  margin:0;
+
+  font-family: "Josefin sans",sans-serif;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+
+}
+.banner-txt p{
+  color: white;
+
+  font-family: "Josefin sans",sans-serif;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+.signup{
+width: 15rem;
+padding:1rem;
+
+font-size: 2rem;
+
+color: white;
+outline: none;
+border:none;
+border-radius: 10rem;
+background-color: crimson;
+cursor:pointer;
+font-family: "Josefin sans",sans-serif;
+}
+svg{
+  position: relative;
+  top:.3rem;
+
+}
+.login-sign-form{
+  width:40%;
+  height:auto;
+transition: all .8s cubic-bezier(1,0,0,1);
+z-index: 999;
+
+  margin:auto;
+  position: fixed;
+  top:10rem;
+  left:100%;
+
+  background-color: white;
+  box-shadow: 0 3rem 6rem rgba(0,0,0,0.6);
+
+}
+.login-sign-switch-form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.sign-toogle{
+  background-color: crimson;
+  width: 10rem;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding:1rem;
+  border:1px solid ;
+  border-radius: 10rem;
+  cursor: pointer;
+  color: white;
+
+  pointer-events:none;
+  transition: all .8s cubic-bezier(1,0,0,1);
+}
+.login-toogle{
+  background-color: #333;
+  width: 10rem;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding:1rem;
+  border:1px solid ;
+  border-radius: 10rem;
+  cursor: pointer;
+  color: white;
+
+  transition: all .8s cubic-bezier(1,0,0,1);
+}
+
+.sign-toogle:hover{
+background-color: crimson;
+}
+.login-toogle:hover{
+  background-color: crimson;
+}
+.login-form{
+  display: none;
+}
+.clm{
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+  padding:2rem 0 2rem 11rem;
+}
+.form-label{
+  font-size: 1.7rem;
+  color: crimson;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Josefin sans",sans-serif;
+  margin-bottom: 2rem;
+
+}
+.form-inp{
+  width: 70%;
+  padding:1rem;
+  outline: none;
+  border-radius: 10rem;
+  font-size: 1.5rem;
+}
+.btns{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signup-btn{
+  width:12rem;
+  background-color: crimson;
+  color: white;
+  border:none;
+  cursor: pointer;
+  padding:1rem;
+  text-transform:uppercase;
+  font-size: 1.5rem;
+  border-radius: 10rem;
+  outline: none;
+  transition: all .8s cubic-bezier(1,0,0,1);
+}
+.google{
+  width:20rem;
+  background-color: #333;
+  color: white;
+  border:none;
+  cursor: pointer;
+  padding:1rem;
+  text-transform:uppercase;
+  font-size: 1.5rem;
+  border-radius: 10rem;
+  outline: none;
+  text-decoration: none;
+  transition: all .8s cubic-bezier(1,0,0,1);
+}
+.signup-btn:hover{
+  background-color: #333;
+}
+.checkbox-2:checked ~ .signup-form{
+  display: none;
+}
+.checkbox-2:checked ~ .login-form{
+  display: block;
+}
+.checkbox-2:checked ~ .login-sign-switch-form .login-toogle{
+  background-color: crimson;
+  pointer-events: none;
+}
+.checkbox-2:checked ~ .login-sign-switch-form .sign-toogle{
+  background-color: #333;
+  cursor:pointer;
+  pointer-events: inherit;
+}
+.close{
+    padding:1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  float: right;
+  background-color: none;;
+  color: black;
+}
+.checkbox-0:checked ~ .login-sign-form{
+  left:55%;
+  z-index: 999;
+}
+.checkbox-0:checked ~ .banner-txt{
+  text-align: left;
+  padding-left: 2.5rem;
+}
+
+.checkbox-0:checked ~ .signup{
+  pointer-events: none;
+}*/

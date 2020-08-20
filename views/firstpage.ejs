@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <link rel="shortcut icon" href="/images/headlogo.png">
+     <script src="https://kit.fontawesome.com/150475fcb8.js" crossorigin="anonymous"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="/css/styles/default.css">
+     <link rel="stylesheet" href="css/firstpage.css">
+
+      <title>Compiler Testing</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inner-left">
+        <div class="heading-expl padding">
+          <h1 class="common-heading">Factorail of a Number</h1>
+          <p>the factorial of a positive integer n, denoted by n!, is the product of all positive integers less than or equal to n: For example, The value of 0! is 1, according to the convention for an empty product</p>
+        </div>
+
+        <div class="example padding">
+          <h1 class="common-heading">Explanation:</h1>
+          <p>6! = 6*5*4*3*2*1 = 720</p>
+          <p>5! = 5*4*3*2*1 = 120</p>
+        </div>
+        <div class="input-temp padding">
+          <h1 class="common-heading">Getting Multi Line input</h1>
+          <pre>
+            <code class="python">
+              import fileinput
+              for line in fileinput.input():
+                  process(line)
+            </code>
+          </pre>
+        </div>
+      </div>
+      <div class="inner-right">
+        <form class="" action="/evaluate" method="post">
+          <select name="lantype" class="lanselect">
+             <option value="front-end">python3</option>
+
+             <option value="python">java</option>
+             <option value="javascript">c</option>
+
+             </select>
+          <textarea  name="name" rows="30" cols="90"><%= test %></textarea>
+          <div class="io">
+            <div class="input">
+              <h1 class="inner-head">Input:</h1>
+              <h3>6</h3>
+              <h3>7</h3>
+              <h3>8</h3>
+              <h3>5</h3>
+            </div>
+            <div class="exp-op">
+              <h1 class="inner-head">Expected-output:</h1>
+              <h3>720 5040 40320 120</h3>
+            </div>
+            <div class="your-op">
+              <h1 class="inner-head">Your-Output:</h1>
+              <h3><%= result %></h3>
+            </div>
+          </div>
+           <button type="submit"  class="submit-btn" name="button" style="margin-bottom: 2px;">eval</button>
+        </form>
+      </div>
+    <!--  <form class="" action="/evaluate" method="post" >
+        <div class="area-cover">
+
+          <div class="top-wrapper">
+            <div class="circle">
+              <div class="circles c1"></div>
+              <div class="circles c2"></div>
+              <div class="circles c3"></div>
+            </div>
+            <select name="lantype" class="lanselect">
+               <option value="front-end">python3</option>
+
+               <option value="python">java</option>
+               <option value="javascript">c</option>
+
+               </select>
+          </div>
+
+          <textarea name="script" rows="35" cols="90" tabindex="1" class="javascript"><%= test %></textarea>
+        </div>
+        <div class="io">
+          <h1>Expected Output:</h1>
+          <p>720 5040 40320 120</p>
+          <h1>Your output:</h1>
+          <p><%= result %></p>
+        </div>
+
+         <button type="submit"  class="submit-btn" name="button" style="margin-bottom: 10px;">eval</button>
+      </form> -->
+    </div>
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  <script src="/js/highlight.pack.js" charset="utf-8"></script>
+  	<script src="/js/jquery-linedtextarea.js"></script>
+  <script type="text/javascript">
+
+
+   hljs.initHighlightingOnLoad()
+  var textareas = document.getElementsByTagName('textarea');
+  var count = textareas.length;
+  for(var i=0;i<count;i++){
+  textareas[i].onkeydown = function(e){
+      if(e.keyCode==9 || e.which==9){
+          e.preventDefault();
+          var s = this.selectionStart;
+          console.log(this.selectionStart);
+          console.log(this.selectionEnd);
+          this.value = this.value.substring(0,this.selectionStart) + "\t" + this.value.substring(this.selectionEnd);
+          this.selectionEnd = s+1;
+      }
+  }
+}
+  </script>
+</html>

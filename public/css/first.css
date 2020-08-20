@@ -2,7 +2,7 @@ body{
   margin:0;
   padding:0;
    font-family: "Montserrat", sans-serif;
-   background-color: #DCDCDC;
+
 }
 html{
   font-size: 62.5%;
@@ -31,6 +31,7 @@ html{
   margin:0;
   padding:0;
   background-color: #e40046 !important;
+  position: relative;
 }
 .social-list{
   list-style: none;
@@ -220,7 +221,7 @@ left: -5rem;
 
 .banner-slide{
   width: 100%;
-  height:40%;
+  height: 100vh;
   position: relative;
   bottom: 1rem;
   z-index: 0;
@@ -419,6 +420,8 @@ display: flex;
   position: relative;
 transition: all .2s linear;
 background-color: white;
+border-top: 2px solid crimson;
+border-bottom: 2px solid crimson;
 }
 .product{
   display: flex;
@@ -528,7 +531,220 @@ background-color: white;
   background-color: #333;
   letter-spacing: .2rem;
 }
+.login-sign-form{
+  width:40%;
+  height:70vh;
+transition: all .8s cubic-bezier(1,0,0,1);
+z-index: 999;
+  margin:auto;
+  position: fixed;
+  top:-66rem;
+  left:30%;
+  background-color: white;
+  box-shadow: 0 3rem 6rem rgba(0,0,0,0.6);
 
+}
+.login-sign-switch-form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.sign-toogle{
+  background-color: crimson;
+  width: 10rem;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding:1rem;
+  border:1px solid ;
+  border-radius: 10rem;
+  cursor: pointer;
+  color: white;
+
+  pointer-events:none;
+  transition: all .8s cubic-bezier(1,0,0,1);
+}
+.login-toogle{
+  background-color: #333;
+  width: 10rem;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding:1rem;
+  border:1px solid ;
+  border-radius: 10rem;
+  cursor: pointer;
+  color: white;
+
+  transition: all .8s cubic-bezier(1,0,0,1);
+}
+
+.sign-toogle:hover{
+background-color: crimson;
+}
+.login-toogle:hover{
+  background-color: crimson;
+}
+.login-form{
+  display: none;
+}
+.clm{
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+  padding:2rem 0 2rem 11rem;
+}
+.form-label{
+  font-size: 1.7rem;
+  color: crimson;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Josefin sans",sans-serif;
+  margin-bottom: 2rem;
+
+}
+.form-inp{
+  width: 70%;
+  padding:1rem;
+  outline: none;
+  border-radius: 10rem;
+  font-size: 1.5rem;
+}
+.btns{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signup-btn{
+  width:12rem;
+  background-color: crimson;
+  color: white;
+  border:none;
+  cursor: pointer;
+  padding:1rem;
+  text-transform:uppercase;
+  font-size: 1.5rem;
+  border-radius: 10rem;
+  outline: none;
+  transition: all .8s cubic-bezier(1,0,0,1);
+}
+.google{
+  width:20rem;
+  background-color: #333;
+  color: white;
+  border:none;
+  cursor: pointer;
+  padding:1rem;
+  text-transform:uppercase;
+  font-size: 1.5rem;
+  border-radius: 10rem;
+  outline: none;
+  text-decoration: none;
+  transition: all .8s cubic-bezier(1,0,0,1);
+}
+.signup-btn:hover{
+  background-color: #333;
+}
+.checkbox-2:checked ~ .signup-form{
+  display: none;
+}
+.checkbox-2:checked ~ .login-form{
+  display: block;
+}
+.checkbox-2:checked ~ .login-sign-switch-form .login-toogle{
+  background-color: crimson;
+  pointer-events: none;
+}
+.checkbox-2:checked ~ .login-sign-switch-form .sign-toogle{
+  background-color: #333;
+  cursor:pointer;
+  pointer-events: inherit;
+}
+.close{
+    padding:1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  float: right;
+  background-color: none;;
+  color: black;
+}
+.checkbox-1:checked ~ .login-sign-form{
+  top:10rem;
+  z-index: 999;
+}
+.checkbox-1:checked ~ .container{
+  opacity: .5;
+  pointer-events: none;
+}
+.new-launch{
+  position: relative;
+  top:10rem;
+  margin-bottom: 5rem;
+  height: 100%;
+
+}
+.Upcoming-launch{
+  width: 100%;
+  margin: auto;
+  box-shadow: 0 3rem 6rem rgba(0,0,0,0.6);
+  display: flex;
+  background-color: #fff;
+}
+.new-vid{
+  width: 50% !important;
+  position: relative;
+
+}
+.detail-container{
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 10rem;
+  width: 50%;
+}
+.detail-container h1{
+
+  font-family: "Josefin sans",sans-serif;
+  font-size: 2.5rem;
+}
+.detail-container p{
+
+  font-size: 1.5rem;
+}
+.butns{
+  display: flex;
+  margin: 3rem;
+  justify-content: space-evenly;
+}
+.view{
+  width:12rem;
+  background-color: #333;
+  color: white;
+  border:none;
+  cursor: pointer;
+  padding:1rem 1rem 1rem 2rem;
+  text-transform:uppercase;
+  font-size: 1.5rem;
+  border-radius: 10rem;
+  outline: none;
+  text-decoration: none;
+  transition: all .8s cubic-bezier(1,0,0,1);
+}
+.Pre-or{
+  width:12rem;
+  background-color: #333;
+  color: white;
+  border:none;
+  cursor: pointer;
+  padding:1rem 1rem 1rem 2rem;
+  text-decoration: none;
+  text-transform:uppercase;
+  font-size: 1.5rem;
+  border-radius: 10rem;
+  outline: none;
+  transition: all .8s cubic-bezier(1,0,0,1);
+}
 @media(max-width:1170px){
   .checkbox:checked ~ .first-nav  .hamburger {
   left: -2rem;
