@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="shortcut icon" href="/images/headlogo.png">
+      <script src="https://kit.fontawesome.com/150475fcb8.js" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/css/styles/default.css">
+      <link rel="stylesheet" href="css/codearea.css">
+      <title>Compiler Testing</title>
+   </head>
+   <body>
+      <%- include("partials/nav"); -%>
+      <div class="container">
+         <div class="content-area">
+            <div class="inner-tabs">
+               <a href="#" class="lb">Explanation</a>
+               <a href="#">Discussion</a>
+               <a href="#">Concept</a>
+            </div>
+            <div class="heading-expl cont active" data-val="Explanation">
+               <h1 class="common-heading">Factorail of a Number</h1>
+               <p>The factorial of a positive integer n, denoted by n!, is the product of all positive integers less than or equal to n: For example, The value of 0! is 1, according to the convention for an empty product</p>
+               <h1 class="common-heading">Explanation:</h1>
+               <p>6! = 6*5*4*3*2*1 = 720</p>
+               <p>5! = 5*4*3*2*1 = 120</p>
+            </div>
+            <div class="heading-expl cont" data-val="Discussion">
+            </div>
+            <div class="heading-expl cont" data-val="Concept">
+               <h1 class="common-heading">Factorail </h1>
+               <p>The factorial of a positive integer n, denoted by n!, is the product of all positive integers less than or equal to n: For example, The value of 0! is 1, according to the convention for an empty product</p>
+               <h1 class="common-heading">Explanation:</h1>
+               <p>6! = 6*5*4*3*2*1 = 720</p>
+               <p>5! = 5*4*3*2*1 = 120</p>
+            </div>
+            <div class="i-o">
+               <h1 class="common-heading">Sample Input:</h1>
+               <p>2<br>3</p>
+               <h1 class="common-heading">Sample Output:</h1>
+               <p>4<br>6</p>
+            </div>
+         </div>
+         <div class="code-area">
+            <form class="" >
+               <div class="slection">
+                  <select name="lantype" class="font" oninput="Customof()">
+                     <option value="12px">12px</option>
+                     <option value="15px">15px</option>
+                     <option value="18px">18px</option>
+                     <option value="20px">20px</option>
+                     <option value="24px">24px</option>
+                  </select>
+                  <select name="theme" class="themeselect" oninput="Customof()">
+                     <option value="cobalt">Cobalt</option>
+                     <option value="github">Git-Hub</option>
+                     <option value="dawn">Dawn</option>
+                     <option value="twilight">Twilight</option>
+                     <option value="chaos">Chaos</option>
+                     <option value="dracula">Dracula</option>
+                  </select>
+                  <select name="lantype" class="lanselect" oninput="Customof()">
+                     <option value="python">python3</option>
+                     <option value="java">java</option>
+                     <option value="c">c</option>
+                     <option value="c++">c++</option>
+                     <option value="c#">c#</option>
+                     <option value="javascript">javascript</option>
+                  </select>
+               </div>
+               <div id="editor" oninput="GetVal()">
+               </div>
+               <textarea name="name" class="edit" rows="8" cols="80" hidden></textarea>
+               <div class="btn-wrapper">
+                  <button class="btn ">Submit</button>
+               </div>
+               <div class="result-box">
+                  <div class="op-error">
+                     <h1 class="common-heading">Output:</h1>
+                     <p id="default-clr">No Output display</p>
+                     <h1 class="common-heading">Hidden TestCases:</h1>
+                     <p class="clr">TestCase-1 <i class="fas fa-check-circle mess gr"></i></p>
+                     <p class="clr">TestCase-2 <i class="fas fa-check-circle mess gr"></i></p>
+                     <p class="clr">TestCase-3 <i class="fas fa-times-circle mess re"></i></p>
+                  </div>
+               </div>
+            </form>
+            <textarea name="some" class="swap1" rows="8" cols="80" hidden oninput="SwapCode()"></textarea>
+         </div>
+      </div>
+   </body>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+   <script src="https://pagecdn.io/lib/ace/1.4.12/ace.js" crossorigin="anonymous" integrity="sha256-Q9hnBpgBFstzZOr+OKFOWZWfcF5nFXO8Qz48Nmndo6U=" ></script>
+   <script src="/js/index.js" charset="utf-8"></script>
+</html>
