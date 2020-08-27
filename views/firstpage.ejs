@@ -97,7 +97,7 @@
           <div class="result-box">
             <div class="op-error">
               <h1 class="common-heading">Output:</h1>
-              <p id="output">No Output display</p>
+              <p id="default-clr">No Output display</p>
               <h1 class="common-heading">Hidden TestCases:</h1>
               <p class="clr">TestCase-1 <i class="fas fa-check-circle mess gr"></i></p>
               <p class="clr">TestCase-2 <i class="fas fa-check-circle mess gr"></i></p>
@@ -180,19 +180,26 @@ var divide = 100;
       data:JSON.stringify({ code: codeinp.val() }),
       success: function(response) {
         if(response[1] === "green"){
-          document.getElementById("output").classList.add("custom-clr-c");
+          document.getElementById("default-clr").style.backgroundColor = "rgba(0,128,0,.2)";
+          document.getElementById("default-clr").style.border = "1px solid rgba(0,128,0)";
+
           document.querySelector(".op-error p").innerText = response[0];
         }
         else if(response[1] === "red"){
-          document.getElementById("output").classList.add("custom-clr-w");
+          document.getElementById("default-clr").style.backgroundColor = "rgba(128,0,0,.2)";
+          document.getElementById("default-clr").style.border = "1px solid rgba(128,0,0)";
           document.querySelector(".op-error p").innerText = response[0];
         }
 
 
-      }
+      },
+
     })
 
   })
+
+
+
 var editor = ace.edit("editor");
   editor.setTheme("ace/theme/cobalt");
   editor.session.setMode("ace/mode/python");

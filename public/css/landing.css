@@ -7,7 +7,7 @@ body{
 margin: 0;
 padding: 0;
 font-family: "Montserrat", sans-serif;
-overflow-x: hidden;
+overflow: hidden;
 /*  background: linear-gradient(to bottom, #fff 50%, #D8BFD8);*/
  height: 100%;
 
@@ -111,278 +111,34 @@ nav{
     position: relative;
     top: -8rem;
 }
-.editor{
-  width: 50%;
-height: 60vh;
-border: 2px solid #333;
-margin: auto;
-box-shadow: 0 3rem 6rem rgba(0,0,0,0.2);
-background-color: #333;
-position: relative;
-top: -62rem;
 
-}
-
-.top{
-  width: 100%;
-  height: 5vh;
-  border: 1px solid #333;
-  border-left-style: none;
-  border-right-style: none;
-  border-top-style: none;
-  border-bottom-color: #fff;
-  display:flex;
-  justify-content: space-between;
-}
-.circle-wrapper{
-  width: 15%;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 1.5rem;
-
-}
-.circle{
-  border:2px solid #333;
-  border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
-
-}
-.test-1{
-  width: 30rem;
-  height: 1.5rem;
-  background-color: lightgreen;
-  margin-top: 2rem;
-  margin-left: 1rem;
-  border-radius: 10rem;
-  animation: test1 .5s;
-  animation-delay: 1s;
-  transition: linear .5s;
-  animation-fill-mode: backwards;
-}
-.test-2{
-  width: 20rem;
-  height: 1.5rem;
-  background-color: lightpink;
-  margin-top: 2rem;
-  margin-left: 3rem;
-  border-radius: 10rem;
-  animation: test2 .5s;
-  animation-delay: 2s;
-  transition: linear 1s;
-  animation-fill-mode: backwards;
-
-}
-.test-3{
-  width: 25rem;
-  height: 1.5rem;
-  background-color: skyblue;
-  margin-top: 2rem;
-  margin-left: 5rem;
-  border-radius: 10rem;
-  animation: test3 .5s;
-  animation-delay: 3s;
-  transition: linear 1s;
-  animation-fill-mode: backwards;
-}
-.test-4{
-  width: 25rem;
-  height: 1.5rem;
-  background-color: crimson;
-  margin-top: 2rem;
-  margin-left: 3rem;
-  border-radius: 10rem;
-  animation: test3 .5s;
-  animation-delay: 4s;
-  transition: linear 1s;
-  animation-fill-mode: backwards;
-}
-.test-5{
-  width: 20rem;
-  height: 1.5rem;
-  background-color: green;
-  margin-top: 2rem;
-  margin-left: 6rem;
-  border-radius: 10rem;
-  animation: test2 .5s;
-  animation-delay: 5s;
-  transition: linear 1s;
-  animation-fill-mode: backwards;
-}
-
-.compile{
-  visibility: hidden;
-    animation: test7 1s 6s backwards;
-    position: relative;
-    top: 5rem;
-    left: 10rem;
-    color: white;
-
-}
-.test-7{
-  width: 20rem;
-  height: 1rem;
-  background-color: lightgreen;
-  animation: test8 1s 8s backwards;
-  margin-bottom: 2rem;
-  border-radius: 10rem;
-  margin-left: 1rem;
-}
-.test-8{
-  width: 20rem;
-  height: 1rem;
-  background-color: crimson;
-  animation: test8 1s 8s backwards;
-  margin-bottom: 2rem;
-  border-radius: 10rem;
-  margin-left: 1rem;
-}
-.test-7-i{
-  visibility: visible;
-  animation: test7i 1s 9s backwards;
-  font-size: 1.5rem;
-  color: green;
-
-}
-.test-8-i{
-  visibility: visible;
-  animation: test7i 1s 9s backwards;
-  font-size: 1.5rem;
-  color: crimson;
-
-}
-.wrap{
-  display: flex;
-  justify-content: space-around;
-}
-@keyframes test1 {
-  0%{
-    width: 0rem;
-  }
-  100%{
-    width: 30rem;
-  }
-}
-@keyframes test2 {
-  0%{
-    width: 0rem;
-  }
-  100%{
-    width: 20rem;
-  }
-}
-@keyframes test3 {
-  0%{
-    width: 0rem;
-  }
-  100%{
-    width: 25rem;
-  }
-}
-@keyframes test6 {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-@keyframes test7 {
-  0%{
-    opacity: 1;
-    visibility: hidden;
-  }
-  100%{
-    opacity: 0;
-
-    visibility: visible;
-  }
-}
-@keyframes test7i {
-  0%{
-    opacity: 1;
-    visibility: hidden;
-
-  }
-  100%{
-    opacity: 0;
-    visibility: visible;
-
-  }
-}
-@keyframes test8 {
-  0%{
-    width: 0rem;
-  }
-  100%{
-    width: 20rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-.exit{
-  background: transparent;
-  outline: none;
-  border: none;
-  float:right;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-}
-.c1{
-  background-color: lightpink;
-  animation: scale 2s infinite;
-  a
-}
-.c2{
-  background-color: lightblue;
-
-}
-.c3{
-  background-color: lightgreen;
-
-}
-.main-wrapper .element{
-  font-family: "Josefin Sans",sans-serif;
-  font-size: 1.8rem;
-}
-
-svg{
-  position: relative;
-  top:1rem;
-}
-@keyframes scale {
-  0%{
-    transform: scale(0);
-  }
-  100%{
-    transform: scale(1.5);
-  }
-}
 .sign-up-form{
   width: 30%;
   margin:10rem auto;
   height: auto;
 
-  display: none;
-  box-shadow: 0 3rem 6rem rgba(0,0,0,0.6);
+
+
+  position: absolute;
+background:linear-gradient(to right, #9525CD,#0DC6FF);
+left: 35%;
+z-index: 2;
+top: -62rem;
+transition: all .8s cubic-bezier(1,0,0,1);
 }
 .log-in-form{
   width: 30%;
   margin:10rem auto;
   height: auto;
 
-  display: none;
-  box-shadow: 0 3rem 6rem rgba(0,0,0,0.6);
+
+
+  position: absolute;
+background:linear-gradient(to right, #9525CD,#0DC6FF);
+left: 35%;
+z-index: 2;
+top: -62rem;
+transition: all .8s cubic-bezier(1,0,0,1);
 }
 .common-heading{
   text-align: center;
@@ -446,31 +202,42 @@ svg{
   padding: 1rem;
   font-size: 1.8rem;
   border-radius: 10rem;
-  border-color: #9525CD;
-  color: #9525CD;
-  background-color: transparent;
-  border: 1px solid;
+  color: white;
+  font-size: 2rem;
+  background-color:#9525CD;
+  border: 1px solid #9525CD;;
   cursor: pointer;
-  transition: all .8s cubic-bezier(1,0,0,1);
+  transition: all .2s;
   font-family: "Josefin sans",sans-serif;
+  outline: none;
 }
 .signup-btn:hover{
-  background-color: #9525CD;
-  color: white;
+  letter-spacing: .2rem;
 }
 
-.checkbox-0:checked ~ .sign-up-form{
-  display: block;
+.checkbox-0:checked ~ .container .sign-up-form{
+  top: 0rem;
 }
-.checkbox-0:checked ~ .container{
-  display: none;
+.checkbox-0:checked ~ .container .nav-wrapper{
+  opacity: .3;
+  pointer-events: none;
 }
-.checkbox-1:checked ~ .log-in-form{
-  display: block;
+.checkbox-0:checked ~ .container .main-wrapper{
+  opacity: .3;
+  pointer-events: none;
 }
-.checkbox-1:checked ~ .container{
-  display: none;
+.checkbox-1:checked ~ .container .log-in-form{
+  top: 0rem;
 }
+.checkbox-1:checked ~ .container .nav-wrapper{
+  opacity: .3;
+  pointer-events: none;
+}
+.checkbox-1:checked ~ .container .main-wrapper{
+  opacity: .3;
+  pointer-events: none;
+}
+
 
 
 

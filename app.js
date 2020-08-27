@@ -52,7 +52,7 @@ hackerEarth.run(config,function(err,response){
         if(a.compile_status === 'OK'){
           res.send([a.run_status.output,"green"]);
         }
-        else{
+        else if(a.compile_status !== 'OK'){
           res.send([a.compile_status,"red"]);
         }
       }
