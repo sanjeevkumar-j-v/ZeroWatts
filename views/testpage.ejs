@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <form class="">
+    <input type="text" name="" value="">
+    <input type="text" id="inp" name="" value="">
+    <button>create</button>
+  </form>
+  <h1>hi</h1>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("form").on('submit',function(e){
+        e.preventDefault();
+        var creinp = $("#inp");
+        console.log(creinp.val());
+        $.ajax({
+          url:'/test',
+          method:'POST',
+          contentType: 'application/json',
+          data:JSON.stringify({ name: creinp.val() }),
+          success: function(response) {
+            console.log(response);
+            console.log(document.querySelector("h1").innerText = response);
+          }
+
+        })
+      })
+    })
+  </script>
+</html>

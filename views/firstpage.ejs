@@ -13,99 +13,219 @@
       <title>Compiler Testing</title>
   </head>
   <body>
-    <div class="container">
-      <div class="inner-left">
-        <div class="heading-expl padding">
-          <h1 class="common-heading">Factorail of a Number</h1>
-          <p>the factorial of a positive integer n, denoted by n!, is the product of all positive integers less than or equal to n: For example, The value of 0! is 1, according to the convention for an empty product</p>
-        </div>
+  <%- include("partials/nav"); -%>
 
-        <div class="example padding">
+    <div class="container">
+      <div class="content-area">
+        <div class="inner-tabs">
+          <a href="#" class="lb">Explanation</a>
+          <a href="#">Discussion</a>
+          <a href="#">Concept</a>
+        </div>
+        <div class="heading-expl cont active" data-val="Explanation">
+          <h1 class="common-heading">Factorail of a Number</h1>
+          <p>The factorial of a positive integer n, denoted by n!, is the product of all positive integers less than or equal to n: For example, The value of 0! is 1, according to the convention for an empty product</p>
           <h1 class="common-heading">Explanation:</h1>
           <p>6! = 6*5*4*3*2*1 = 720</p>
           <p>5! = 5*4*3*2*1 = 120</p>
         </div>
-        <div class="input-temp padding">
-          <h1 class="common-heading">Getting Multi Line input</h1>
-          <pre>
-            <code class="python">
-              import fileinput
-              for line in fileinput.input():
-                  process(line)
-            </code>
-          </pre>
+
+        <div class="heading-expl cont" data-val="Discussion">
+
         </div>
+        <div class="heading-expl cont" data-val="Concept">
+          <h1 class="common-heading">Factorail </h1>
+          <p>The factorial of a positive integer n, denoted by n!, is the product of all positive integers less than or equal to n: For example, The value of 0! is 1, according to the convention for an empty product</p>
+          <h1 class="common-heading">Explanation:</h1>
+          <p>6! = 6*5*4*3*2*1 = 720</p>
+          <p>5! = 5*4*3*2*1 = 120</p>
+        </div>
+        <div class="i-o">
+          <h1 class="common-heading">Sample Input:</h1>
+          <p>2<br>3</p>
+          <h1 class="common-heading">Sample Output:</h1>
+          <p>4<br>6</p>
+        </div>
+
       </div>
-      <div class="inner-right">
-        <form class="" action="/evaluate" method="post">
-          <select name="lantype" class="lanselect">
-             <option value="front-end">python3</option>
+      <div class="code-area">
+      <!--  <span class="timeout">0.00</span><br><br>
+        <button type="button" name="button"class="change" onclick="StartStop()">Start</button>
 
-             <option value="python">java</option>
-             <option value="javascript">c</option>
+        <button type="button" name="button" onclick="Reset()">reset</button> -->
+        <form class="" >
+          <div class="slection">
+            <select name="lantype" class="font" oninput="Customof()">
+               <option value="12px">12px</option>
 
-             </select>
-          <textarea  name="name" rows="30" cols="90"><%= test %></textarea>
-          <div class="io">
-            <div class="input">
-              <h1 class="inner-head">Input:</h1>
-              <h3>6</h3>
-              <h3>7</h3>
-              <h3>8</h3>
-              <h3>5</h3>
-            </div>
-            <div class="exp-op">
-              <h1 class="inner-head">Expected-output:</h1>
-              <h3>720 5040 40320 120</h3>
-            </div>
-            <div class="your-op">
-              <h1 class="inner-head">Your-Output:</h1>
-              <h3><%= result %></h3>
-            </div>
-          </div>
-           <button type="submit"  class="submit-btn" name="button" style="margin-bottom: 2px;">eval</button>
-        </form>
-      </div>
-    <!--  <form class="" action="/evaluate" method="post" >
-        <div class="area-cover">
+               <option value="15px">15px</option>
+               <option value="18px">18px</option>
+               <option value="20px">20px</option>
+               <option value="24px">24px</option>
 
-          <div class="top-wrapper">
-            <div class="circle">
-              <div class="circles c1"></div>
-              <div class="circles c2"></div>
-              <div class="circles c3"></div>
-            </div>
-            <select name="lantype" class="lanselect">
-               <option value="front-end">python3</option>
-
-               <option value="python">java</option>
-               <option value="javascript">c</option>
 
                </select>
+            <select name="theme" class="themeselect" oninput="Customof()">
+              <option value="cobalt">Cobalt</option>
+               <option value="github">Git-Hub</option>
+               <option value="dawn">Dawn</option>
+               <option value="twilight">Twilight</option>
+               <option value="chaos">Chaos</option>
+               <option value="dracula">Dracula</option>
+               </select>
+
+            <select name="lantype" class="lanselect" oninput="Customof()">
+               <option value="python">python3</option>
+
+               <option value="java">java</option>
+               <option value="c">c</option>
+               <option value="c++">c++</option>
+               <option value="c#">c#</option>
+               <option value="javascript">javascript</option>
+
+               </select>
+
           </div>
+          <div id="editor" oninput="TestCheck()">
 
-          <textarea name="script" rows="35" cols="90" tabindex="1" class="javascript"><%= test %></textarea>
-        </div>
-        <div class="io">
-          <h1>Expected Output:</h1>
-          <p>720 5040 40320 120</p>
-          <h1>Your output:</h1>
-          <p><%= result %></p>
-        </div>
+          </div>
+          <textarea name="name" class="edit" rows="8" cols="80" hidden></textarea>
+          <div class="btn-wrapper">
 
-         <button type="submit"  class="submit-btn" name="button" style="margin-bottom: 10px;">eval</button>
-      </form> -->
+            <button class="btn ">Submit</button>
+          </div>
+          <div class="result-box">
+            <div class="op-error">
+              <h1 class="common-heading">Output:</h1>
+              <p id="output">No Output display</p>
+              <h1 class="common-heading">Hidden TestCases:</h1>
+              <p class="clr">TestCase-1 <i class="fas fa-check-circle mess gr"></i></p>
+              <p class="clr">TestCase-2 <i class="fas fa-check-circle mess gr"></i></p>
+              <p class="clr">TestCase-3 <i class="fas fa-times-circle mess re"></i></p>
+            </div>
+          </div>
+        </form>
+        <textarea name="some" class="swap1" rows="8" cols="80" hidden oninput="SwapCode()"></textarea>
+      </div>
     </div>
-
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
-  <script src="/js/highlight.pack.js" charset="utf-8"></script>
-  	<script src="/js/jquery-linedtextarea.js"></script>
+  <script src="https://pagecdn.io/lib/ace/1.4.12/ace.js" crossorigin="anonymous" integrity="sha256-Q9hnBpgBFstzZOr+OKFOWZWfcF5nFXO8Qz48Nmndo6U=" ></script>
+
   <script type="text/javascript">
 
 
-   hljs.initHighlightingOnLoad()
-  var textareas = document.getElementsByTagName('textarea');
+var i,timer,divide;
+var i = 0;
+var divide = 100;
+  function StartStop(){
+    if(document.querySelector(".change").innerText === "Start"){
+        timer = self.setInterval("increment()",(1000/divide));
+        document.querySelector(".change").innerText = "Stop"
+    }
+    else{
+      clearInterval(timer);
+      timer = null;
+      document.querySelector(".change").innerText = "Start"
+    }
+
+
+  }
+  function increment(){
+    i++;
+    document.querySelector(".timeout").innerText = (i/divide);
+  }
+  function Reset(){
+    stop();
+    i=0;
+    document.querySelector(".timeout").innerText = "0.00";
+  }
+
+  $(".content-area .inner-tabs a").click(function(){
+
+  $(".content-area .inner-tabs a").css("text-decoration","none");
+
+    $(this).css("text-decoration","underline");
+  })
+  var a = document.querySelectorAll(".content-area .inner-tabs a");
+  var b = document.querySelectorAll(".content-area .cont");
+  for(let i=0; i < a.length; i++){
+
+  a[i].addEventListener("click",function(){
+    console.log(i);
+    for(var j = 0 ; j < b.length; j++){
+      if(i !== j){
+        b[j].style.display = "none"
+
+          console.log(j);
+      }
+      else{
+        b[i].style.display = "block"
+        a[i].style.backgroundColor = "lighublue"
+      }
+
+    }
+
+  })
+}
+
+  $("form").on('submit',function(e){
+    e.preventDefault();
+    var codeinp = $(".edit");
+    console.log($(".edit").val());
+    $.ajax({
+      url:'/home',
+      method:'POST',
+      contentType: 'application/json',
+      data:JSON.stringify({ code: codeinp.val() }),
+      success: function(response) {
+        if(response[1] === "green"){
+          document.getElementById("output").classList.add("custom-clr-c");
+          document.querySelector(".op-error p").innerText = response[0];
+        }
+        else if(response[1] === "red"){
+          document.getElementById("output").classList.add("custom-clr-w");
+          document.querySelector(".op-error p").innerText = response[0];
+        }
+
+
+      }
+    })
+
+  })
+var editor = ace.edit("editor");
+  editor.setTheme("ace/theme/cobalt");
+  editor.session.setMode("ace/mode/python");
+// pass options to ace.edit
+
+ace.edit(element,{
+  mode: "ace/mode/python",
+  selectionStyle: "text"
+})
+function Customof(){
+var st = document.querySelector(".lanselect").value;
+var fon = document.querySelector(".font").value;
+var theme = document.querySelector(".themeselect").value;
+console.log(theme);
+  editor.setTheme("ace/theme/"+theme);
+editor.session.setMode("ace/mode/"+st);
+document.querySelector('#editor').style.fontSize = fon;
+
+}
+function TestCheck(){
+  var s = document.querySelector(".ace_content").innerText;
+  console.log(document.querySelector(".edit").value = s);
+}
+
+
+
+
+
+
+  //document.querySelector(".ace_content").innerText = document.querySelector(".swap1").innerText;
+
+
+/*  var textareas = document.getElementsByTagName('textarea');
   var count = textareas.length;
   for(var i=0;i<count;i++){
   textareas[i].onkeydown = function(e){
@@ -118,6 +238,6 @@
           this.selectionEnd = s+1;
       }
   }
-}
+}*/
   </script>
 </html>
