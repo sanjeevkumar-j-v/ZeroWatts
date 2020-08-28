@@ -3,7 +3,9 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.render("codearea");
+    res.render("codearea", {
+        "title": "CodeArea | ZeroWatts"
+    });
 })
 
 router.post("/", (req, res) => {
