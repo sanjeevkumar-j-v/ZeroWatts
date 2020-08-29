@@ -1,6 +1,10 @@
 const express = require("express");
 
 const router = express.Router();
+var http = require("http");
+var request = require('request');
+var hackerEarth = require("hackerearth-node");
+var hackerEarth = new hackerEarth('c79c38f47874fc0f7d2fa763b4fdf7b31d44fdf7');
 
 router.get("/", (req, res) => {
     res.render("codearea", {
@@ -8,7 +12,7 @@ router.get("/", (req, res) => {
     });
 })
 
-router.post("/", (req, res) => {
+router.post("/compile", (req, res) => {
     console.log(req.body.code);
     var code = req.body.code;
     var lan = req.body.lantype;

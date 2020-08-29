@@ -9,6 +9,7 @@ router.get("/", (req, res) => {
 })
 
 router.use("/codearea", require("./codearea"))
+router.use("/aboutus", require("./aboutus"))
 
 
 module.exports = router;

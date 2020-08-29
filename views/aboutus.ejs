@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>AboutUs</title>
+      <script src="https://kit.fontawesome.com/150475fcb8.js" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/css/about.css">
+   </head>
+   <body>
+      <div class="container">
+         <div class="wrapper">
+            <div class="about-us">
+               <h1 class="common-heading awh">AboutUs</h1>
+               <div class="underline ach"></div>
+               <div class="underline-sh-top"></div>
+               <div class="content-wrapper conwidth">
+                  <div class="content-box">
+                     <h1>Our Goal :</h1>
+                     <p>Learn Programming Language Easily.</p>
+                     <h1>Our Moto :</h1>
+                     <p>Learn Concept With Coding</p>
+                     <p>We “Zero Watts” began this site to help every student to learn programming language easily.</p>
+                     <p>As a novice in programming everyone has a small fear in the corner of their brain. How we can learn that? Is it easy to learn? To kick off those fears we thought of an answer. Here you can learn programming language effectively along with the concept you can practice coding at the same time.</p>
+                  </div>
+                  <div class="img-wrapper">
+                     <img class="img-1" src="/images/1.png" alt="">
+                     <img  class="img-2" src="/images/2.png" alt="">
+                     <img class="img-3" src="/images/3.png" alt="">
+                     <img class="img-4" src="/images/4.png" alt="">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="team">
+            <h1 class="common-heading wh">Our Team</h1>
+            <div class="underline ch"></div>
+            <div class="underline-sh"></div>
+            <div class="content-wrapper flex">
+               <div class="card up">
+                  <img src="/images/sk.jpg" alt="">
+                  <div class="full-wrap">
+                     <div class="card-content">
+                        <h1>Sanjeev Kumar S</h1>
+                        <h3>Founder & CEO of ZeroWatts</h3>
+                        <h4>MERN Stack Developer</h4>
+                     </div>
+                     <div class="about">
+                        <p>I'm sanjeev MERN stack developer. currently pursuing IIIrd Year in a domain CSE. Working in both front-end and back-end of ZeroWatts </p>
+                     </div>
+                     <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="card">
+                  <img src="/images/bhuvan.jpeg" alt="">
+                  <div class="full-wrap">
+                     <div class="card-content">
+                        <h1>BhuvaneshWara Raja K</h1>
+                        <h3>Founder & CEO of ZeroWatts</h3>
+                        <h4>Full Stack Developer</h4>
+                     </div>
+                     <div class="about">
+                        <p>I'm Bhuvanesh Full stack developer. currently pursuing IIIrd Year in a domain CSE. Working in both front-end and back-end of ZeroWatts </p>
+                     </div>
+                     <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="card down">
+                  <img src="/images/mathesh.jpeg" alt="">
+                  <div class="full-wrap">
+                     <div class="card-content">
+                        <h1>Mathesh Kumar P</h1>
+                        <h3>Founder & CEO of ZeroWatts</h3>
+                        <h4>Front-end Developer</h4>
+                     </div>
+                     <div class="about">
+                        <p>I'm Mathesh  Front-end developer. currently pursuing IIIrd Year in a domain CSE. Working in front-end of ZeroWatts </p>
+                     </div>
+                     <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+   <script type="text/javascript">
+      $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if(scroll >= 50 && scroll <=150){
+          $(".img-2").css("top","-3rem");
+          $(".img-4").css("top","3rem");
+          $(".img-wrapper img").css("margin-right",".5rem");
+        }
+        else if( scroll > 150){
+          $(".img-2").css("top","-4rem");
+          $(".img-4").css("top","4rem");
+          $(".ach").css("top","36rem");
+          $(".ch").css("top","36rem");
+
+        }
+        else{
+          $(".img-2").css("top","0rem");
+          $(".img-4").css("top","0rem");
+          $(".img-wrapper img").css("margin-right","0rem");
+          $(".ach").css("top","25rem");
+          $(".ch").css("top","25rem");
+
+        }
+      })
+   </script>
+</html>

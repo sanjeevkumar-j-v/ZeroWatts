@@ -23,7 +23,7 @@ $("form").on('submit', function(e) {
     var codeinp = $(".edit");
     console.log($(".edit").val());
     $.ajax({
-        url: '/codearea',
+        url: '/codearea/compile',
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({
