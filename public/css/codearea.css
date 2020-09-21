@@ -130,7 +130,7 @@ body {
 	border: none;
 }
 
-.lanselect option: {
+.lanselect option {
 	font-size: 1.7rem;
 	border: 1px solid white;
 }
