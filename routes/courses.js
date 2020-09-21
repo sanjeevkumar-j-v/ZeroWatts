@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 
 router.get("/python", (req,res) => {
   res.render("program", {
-    title: "Python | CodeSparks",
+    title: "Python | ZeroWatts",
   });
 });
 
