@@ -593,10 +593,12 @@ a[class*="text-"]:not(.nav-link):not(.dropdown-item):not([role]):hover {
   background-position: 0px 1.2em;
 }
 .nav-tabs .nav-link.active {
-  color: #6592e6;
+  color: #fff;
+  background-color: #3970a1;
 }
 .nav-tabs .nav-link:not(.active) {
-  color: #232323;
+  color: #3970a1;
+  background-color: #fff;
 }
 .alert-success {
   background-color: #70c770;
@@ -1337,7 +1339,7 @@ h6,
 span,
 p,
 a {
-  line-height: 1;
+  line-height: 1.2;
   word-break: break-word;
   word-wrap: break-word;
   font-weight: 400;
@@ -1866,6 +1868,17 @@ nav .mbr-section-btn {
 
 .card-wrapper {
   -webkit-flex: 1;
+}
+
+.card-outline {
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  background-color: #576fdab2;
+  box-shadow: #000000 0px 0px 38px -15px;
+  min-height: 200px;
+  max-height: 300px;
+  overflow: hidden;
+  line-height: 10;
 }
 
 .carousel-control {
