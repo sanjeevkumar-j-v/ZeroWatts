@@ -1,5 +1,5 @@
 :root {
-  --main-color: #3970a1;
+  --main-color: purple;
 }
 
 .timeline {
@@ -129,14 +129,10 @@
 
 .timeline-container .content:hover{
     color: #fff;
-    background-color: #3970a1;
+    background-color: var(--main-color);
     
 }
-.timeline-container .content:hover > .timeline-container .content p{
-    color: #fff;
-    background-color: #3970a1;
-    
-}
+
 @media (max-width: 767.98px) {
   .timeline::after {
     left: 90px;
