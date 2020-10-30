@@ -1,5 +1,5 @@
 :root {
-  --main-color: purple;
+  --main-color: #9525cd;
 }
 
 .timeline {
@@ -101,7 +101,7 @@
 
 .timeline-container .content {
   padding: 30px 45px;
-  background: #ffffff;
+  /* background: #ffffff; */
   position: relative;
   border: 5px solid #fdd628;
   border-radius: 500px 0 500px 500px;
